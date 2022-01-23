@@ -11,6 +11,9 @@ export async function getPokedex() {
 // set the response to a variable we used to fetch to get the data from the API
 // we used await to wait for the response to be ready
 //if we do not use await the code will continue to run before the response is ready
+const template = document.querySelector('#template');
+const selectEl = document.querySelector('select');
+console.log(template, selectEl);
 
 
 // grab DOM elements
