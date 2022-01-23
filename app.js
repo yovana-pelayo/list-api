@@ -1,9 +1,6 @@
+import { getPokedex, getStarWarsPeople } from ".api/fetch.js";
 
-//no idea what json does!!! I NTS: look it up 
-// I understand that return is grabbign the results but from where?
-// set the url to a variable
-// set the response to a Pr the response to be ready
-//if we do not use await the code will continue to run before the response is ready
+const list = document.querySelector("#list");
 const template = document.querySelector('#template');
 const selectEl = document.querySelector('select');
 // console.log(template, selectedEl);
@@ -27,7 +24,7 @@ image.src = pokemon.url_image;
 image.alt = pokemon.pokedex;
 list.appendChild(clone);
     }
-}
+
 selectEl.addEventListener('change', async (e) => {
     const selected = e.target.value;
     if (selected === 'pokemon') {
